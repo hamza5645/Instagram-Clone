@@ -68,7 +68,7 @@ struct ProfileView: View {
     //                Divider()
                 }
                 
-                //post grid view
+                // grid view
                 
                 LazyVGrid(columns: gridItems, spacing: 1) {
                     ForEach(0 ... 15, id: \.self) { index in
