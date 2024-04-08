@@ -41,11 +41,11 @@ struct ProfileView: View {
                     
                     // name and bio
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Name")
+                        Text("Hamza")
                             .font(.footnote)
                             .fontWeight(.semibold)
                         
-                        Text("Bio")
+                        Text("Software Developer")
                             .font(.footnote)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
