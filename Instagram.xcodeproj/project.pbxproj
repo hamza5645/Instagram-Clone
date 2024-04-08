@@ -11,6 +11,7 @@
 		2F6136F42BC42333008CD79F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6136F32BC42333008CD79F /* ContentView.swift */; };
 		2F6136F62BC42335008CD79F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6136F52BC42335008CD79F /* Assets.xcassets */; };
 		2F6136F92BC42335008CD79F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6136F82BC42335008CD79F /* Preview Assets.xcassets */; };
+		2F61370C2BC42565008CD79F /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61370B2BC42565008CD79F /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2F6136F32BC42333008CD79F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2F6136F52BC42335008CD79F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F6136F82BC42335008CD79F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2F61370B2BC42565008CD79F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +53,11 @@
 		2F6136F02BC42333008CD79F /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				2F6136F12BC42333008CD79F /* InstagramApp.swift */,
+				2F6137032BC42389008CD79F /* App */,
+				2F6137022BC42386008CD79F /* Core */,
+				2F6137012BC42382008CD79F /* Extensions */,
+				2F6137002BC42380008CD79F /* Model */,
+				2F6136FF2BC4237D008CD79F /* Services */,
 				2F6136F32BC42333008CD79F /* ContentView.swift */,
 				2F6136F52BC42335008CD79F /* Assets.xcassets */,
 				2F6136F72BC42335008CD79F /* Preview Content */,
@@ -65,6 +71,99 @@
 				2F6136F82BC42335008CD79F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2F6136FF2BC4237D008CD79F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2F6137002BC42380008CD79F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F6137012BC42382008CD79F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2F6137022BC42386008CD79F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2F6137042BC4240E008CD79F /* Authentication */,
+				2F6137062BC4243A008CD79F /* Feed */,
+				2F6137052BC42429008CD79F /* Profile */,
+				2F6137072BC4243E008CD79F /* Root */,
+				2F6137082BC42441008CD79F /* Search */,
+				2F61370A2BC42498008CD79F /* TabBar */,
+				2F6137092BC42498008CD79F /* UploadPost */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2F6137032BC42389008CD79F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2F6136F12BC42333008CD79F /* InstagramApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2F6137042BC4240E008CD79F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		2F6137052BC42429008CD79F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2F6137062BC4243A008CD79F /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		2F6137072BC4243E008CD79F /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		2F6137082BC42441008CD79F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2F6137092BC42498008CD79F /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		2F61370A2BC42498008CD79F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2F61370B2BC42565008CD79F /* MainTabView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +238,7 @@
 			files = (
 				2F6136F42BC42333008CD79F /* ContentView.swift in Sources */,
 				2F6136F22BC42333008CD79F /* InstagramApp.swift in Sources */,
+				2F61370C2BC42565008CD79F /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +380,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +410,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
