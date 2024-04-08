@@ -82,13 +82,11 @@ struct FeedCell: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.footnote)
             .padding(.leading, 10)
-            .padding(.top, 1)
             
             Text("6h ago")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.footnote)
                 .padding(.leading, 10)
-                .padding(.top, 1)
                 .foregroundStyle(.gray)
         }
     }
