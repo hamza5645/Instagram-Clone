@@ -21,7 +21,7 @@ struct ProfileView: View {
                 VStack(spacing: 10) {
                     // pic and stats
                     HStack {
-                        Image("pfp")
+                        Image("pfp-1")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 80, height: 80)

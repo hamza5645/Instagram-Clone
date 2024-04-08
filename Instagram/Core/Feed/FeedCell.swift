@@ -12,7 +12,7 @@ struct FeedCell: View {
         VStack {
             // pfp + username
             HStack {
-                Image("pfp")
+                Image("pfp-1")
                     .resizable()
                     .scaledToFill()
                     .frame(width: 40, height: 40)
