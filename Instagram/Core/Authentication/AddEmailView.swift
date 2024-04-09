@@ -31,9 +31,9 @@ struct AddEmailView: View {
                 
                 // login
                 Button {
-                    print("login")
+                    print("Go to username")
                 } label: {
-                    Text("Login")
+                    Text("Next")
                         .font(.subheadline)
                         .fontWeight(.semibold)
                         .foregroundStyle(.white)
