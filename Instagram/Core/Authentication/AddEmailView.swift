@@ -30,8 +30,9 @@ struct AddEmailView: View {
                     .modifier(IGTextFieldModifier())
                 
                 // login
-                Button {
-                    print("Go to username")
+                NavigationLink {
+                    CreateUsernameView()
+                    .navigationBarBackButtonHidden(true)
                 } label: {
                     Text("Next")
                         .font(.subheadline)
