@@ -22,6 +22,7 @@
 		2F61371D2BC5FC0E008CD79F /* IGTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61371C2BC5FC0E008CD79F /* IGTextFieldModifier.swift */; };
 		2F61371F2BC5FD25008CD79F /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61371E2BC5FD25008CD79F /* CreateUsernameView.swift */; };
 		2F6137212BC5FFB1008CD79F /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137202BC5FFB1008CD79F /* CreatePasswordView.swift */; };
+		2F6137232BC9B915008CD79F /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137222BC9B915008CD79F /* CompleteSignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2F61371C2BC5FC0E008CD79F /* IGTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextFieldModifier.swift; sourceTree = "<group>"; };
 		2F61371E2BC5FD25008CD79F /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
 		2F6137202BC5FFB1008CD79F /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
+		2F6137222BC9B915008CD79F /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				2F61371A2BC57C57008CD79F /* AddEmailView.swift */,
 				2F61371E2BC5FD25008CD79F /* CreateUsernameView.swift */,
 				2F6137202BC5FFB1008CD79F /* CreatePasswordView.swift */,
+				2F6137222BC9B915008CD79F /* CompleteSignUpView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				2F6136F22BC42333008CD79F /* InstagramApp.swift in Sources */,
 				2F61371B2BC57C57008CD79F /* AddEmailView.swift in Sources */,
 				2F61371F2BC5FD25008CD79F /* CreateUsernameView.swift in Sources */,
+				2F6137232BC9B915008CD79F /* CompleteSignUpView.swift in Sources */,
 				2F6137172BC49A9C008CD79F /* SearchView.swift in Sources */,
 				2F61371D2BC5FC0E008CD79F /* IGTextFieldModifier.swift in Sources */,
 				2F6137112BC43A94008CD79F /* UserStatView.swift in Sources */,
