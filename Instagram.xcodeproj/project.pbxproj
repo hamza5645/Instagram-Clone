@@ -27,6 +27,7 @@
 		2F6137272BC9F48D008CD79F /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137262BC9F48D008CD79F /* CurrentUserProfileView.swift */; };
 		2F6137292BCC2E4C008CD79F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137282BCC2E4C008CD79F /* Post.swift */; };
 		2F61372B2BCC7A3E008CD79F /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61372A2BCC7A3E008CD79F /* PostGridView.swift */; };
+		2F61372D2BCC7C0B008CD79F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61372C2BCC7C0B008CD79F /* ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		2F6137262BC9F48D008CD79F /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		2F6137282BCC2E4C008CD79F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2F61372A2BCC7A3E008CD79F /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
+		2F61372C2BCC7C0B008CD79F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				2F61370D2BC4328F008CD79F /* ProfileView.swift */,
 				2F6137262BC9F48D008CD79F /* CurrentUserProfileView.swift */,
+				2F61372C2BCC7C0B008CD79F /* ProfileHeaderView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				2F61371B2BC57C57008CD79F /* AddEmailView.swift in Sources */,
 				2F61372B2BCC7A3E008CD79F /* PostGridView.swift in Sources */,
 				2F61371F2BC5FD25008CD79F /* CreateUsernameView.swift in Sources */,
+				2F61372D2BCC7C0B008CD79F /* ProfileHeaderView.swift in Sources */,
 				2F6137232BC9B915008CD79F /* CompleteSignUpView.swift in Sources */,
 				2F6137252BC9BAFF008CD79F /* User.swift in Sources */,
 				2F6137172BC49A9C008CD79F /* SearchView.swift in Sources */,
