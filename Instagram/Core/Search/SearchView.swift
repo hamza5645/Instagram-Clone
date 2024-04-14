@@ -17,7 +17,7 @@ struct SearchView: View {
                     ForEach(User.MOCK_USERS) { user in
                         NavigationLink(value: user) {
                             HStack {
-                                Image(user.profileImageUrl ?? "pfp-2")
+                                Image(user.profileImageUrl ?? "pfp-salman")
                                     .resizable()
                                     .scaledToFill()
                                     .frame(width: 40, height: 40)
