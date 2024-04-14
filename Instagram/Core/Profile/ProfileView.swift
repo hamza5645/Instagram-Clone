@@ -11,11 +11,7 @@ struct ProfileView: View {
     
     let user: User
     
-    private let gridItems: [GridItem] = [
-        .init(.flexible(), spacing: 1),
-        .init(.flexible(), spacing: 1),
-        .init(.flexible(), spacing: 1)
-    ]
+    private let imageDimension: CGFloat = (UIScreen.main.bounds.width / 3) - 1
     
     var post: [Post] {
         return Post.MOCK_POSTS.filter({ $0.user?.username == user.username })
@@ -74,19 +70,11 @@ struct ProfileView: View {
                         .overlay(RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1))
                 }
-                
-                //                Divider()
             }
             
             // grid view
             
-            LazyVGrid(columns: gridItems, spacing: 1) {
-                ForEach(post) { post in
-                    Image(post.imageUrl)
-                        .resizable()
-                        .scaledToFill()
-                }
-            }
+            PostGridView(post: post)
         }
         .navigationTitle("Profile")
         .navigationBarTitleDisplayMode(.inline)
