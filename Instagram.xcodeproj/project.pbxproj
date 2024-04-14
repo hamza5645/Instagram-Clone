@@ -28,6 +28,7 @@
 		2F6137292BCC2E4C008CD79F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137282BCC2E4C008CD79F /* Post.swift */; };
 		2F61372B2BCC7A3E008CD79F /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61372A2BCC7A3E008CD79F /* PostGridView.swift */; };
 		2F61372D2BCC7C0B008CD79F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61372C2BCC7C0B008CD79F /* ProfileHeaderView.swift */; };
+		2F61372F2BCC8AFE008CD79F /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61372E2BCC8AFE008CD79F /* UploadPostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		2F6137282BCC2E4C008CD79F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		2F61372A2BCC7A3E008CD79F /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		2F61372C2BCC7C0B008CD79F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		2F61372E2BCC8AFE008CD79F /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		2F6137092BC42498008CD79F /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
+				2F61372E2BCC8AFE008CD79F /* UploadPostView.swift */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6137152BC442ED008CD79F /* FeedCell.swift in Sources */,
+				2F61372F2BCC8AFE008CD79F /* UploadPostView.swift in Sources */,
 				2F61370E2BC4328F008CD79F /* ProfileView.swift in Sources */,
 				2F6136F42BC42333008CD79F /* ContentView.swift in Sources */,
 				2F6137192BC57542008CD79F /* LoginView.swift in Sources */,
