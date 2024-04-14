@@ -17,6 +17,10 @@ struct ProfileView: View {
         .init(.flexible(), spacing: 1)
     ]
     
+    var post: [Post] {
+        return Post.MOCK_POSTS.filter({ $0.user?.username == user.username })
+    }
+    
     var body: some View {
         ScrollView{
             // header
@@ -77,8 +81,8 @@ struct ProfileView: View {
             // grid view
             
             LazyVGrid(columns: gridItems, spacing: 1) {
-                ForEach(0 ... 15, id: \.self) { index in
-                    Image("porsche-2")
+                ForEach(post) { post in
+                    Image(post.imageUrl)
                         .resizable()
                         .scaledToFill()
                 }
