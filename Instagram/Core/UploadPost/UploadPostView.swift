@@ -12,6 +12,7 @@ struct UploadPostView: View {
     @State private var caption = ""
     @State private var imagePickerPresented = false
     @StateObject var viewModel = UploadPostViewModel()
+    @Binding var tabIndex: Int
     
     var body: some View {
         VStack {
@@ -19,7 +20,10 @@ struct UploadPostView: View {
             // action toolbar
             HStack {
                 Button {
-                    print("Cancel upload")
+                    caption = ""
+                    viewModel.selctedImage = nil
+                    viewModel.postImage = nil
+                    tabIndex = 0
                 } label: {
                     Text("Cancel")
                 }
@@ -64,5 +68,5 @@ struct UploadPostView: View {
 }
 
 #Preview {
-    UploadPostView()
+    UploadPostView(tabIndex: .constant(0))
 }
