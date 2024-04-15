@@ -25,7 +25,7 @@ struct AddEmailView: View {
                 .padding(.horizontal, 24)
             
             TextField("Email", text: $viewModel.email)
-                .textInputAutocapitalization(.none)
+                .textInputAutocapitalization(.never)
                 .modifier(IGTextFieldModifier())
             
             // login
