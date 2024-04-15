@@ -35,6 +35,8 @@
 		2F6137382BCD3FC4008CD79F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2F6137372BCD3FC4008CD79F /* FirebaseFirestore */; };
 		2F61373A2BCD3FC4008CD79F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2F6137392BCD3FC4008CD79F /* FirebaseFirestoreSwift */; };
 		2F61373C2BCD3FC4008CD79F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 2F61373B2BCD3FC4008CD79F /* FirebaseStorage */; };
+		2F6137402BCD42A4008CD79F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F61373F2BCD42A4008CD79F /* AuthService.swift */; };
+		2F6137442BCD44A3008CD79F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137432BCD44A3008CD79F /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		2F61372E2BCC8AFE008CD79F /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		2F6137302BCC8E1B008CD79F /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		2F6137322BCD3BA0008CD79F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Instagram/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2F61373F2BCD42A4008CD79F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		2F6137432BCD44A3008CD79F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +108,6 @@
 				2F6137012BC42382008CD79F /* Extensions */,
 				2F6137002BC42380008CD79F /* Model */,
 				2F6136FF2BC4237D008CD79F /* Services */,
-				2F6136F32BC42333008CD79F /* ContentView.swift */,
 				2F6137322BCD3BA0008CD79F /* GoogleService-Info.plist */,
 				2F6136F52BC42335008CD79F /* Assets.xcassets */,
 				2F6136F72BC42335008CD79F /* Preview Content */,
@@ -169,11 +172,8 @@
 		2F6137042BC4240E008CD79F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				2F6137182BC57542008CD79F /* LoginView.swift */,
-				2F61371A2BC57C57008CD79F /* AddEmailView.swift */,
-				2F61371E2BC5FD25008CD79F /* CreateUsernameView.swift */,
-				2F6137202BC5FFB1008CD79F /* CreatePasswordView.swift */,
-				2F6137222BC9B915008CD79F /* CompleteSignUpView.swift */,
+				2F61373E2BCD4290008CD79F /* Service */,
+				2F61373D2BCD4276008CD79F /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -200,6 +200,8 @@
 		2F6137072BC4243E008CD79F /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				2F6137422BCD443A008CD79F /* ViewModel */,
+				2F6137412BCD4433008CD79F /* View */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -237,6 +239,42 @@
 				2F61372A2BCC7A3E008CD79F /* PostGridView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		2F61373D2BCD4276008CD79F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F6137182BC57542008CD79F /* LoginView.swift */,
+				2F61371A2BC57C57008CD79F /* AddEmailView.swift */,
+				2F61371E2BC5FD25008CD79F /* CreateUsernameView.swift */,
+				2F6137202BC5FFB1008CD79F /* CreatePasswordView.swift */,
+				2F6137222BC9B915008CD79F /* CompleteSignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F61373E2BCD4290008CD79F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2F61373F2BCD42A4008CD79F /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2F6137412BCD4433008CD79F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F6136F32BC42333008CD79F /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F6137422BCD443A008CD79F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F6137432BCD44A3008CD79F /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,12 +362,14 @@
 				2F61370E2BC4328F008CD79F /* ProfileView.swift in Sources */,
 				2F6136F42BC42333008CD79F /* ContentView.swift in Sources */,
 				2F6137192BC57542008CD79F /* LoginView.swift in Sources */,
+				2F6137402BCD42A4008CD79F /* AuthService.swift in Sources */,
 				2F6137292BCC2E4C008CD79F /* Post.swift in Sources */,
 				2F6136F22BC42333008CD79F /* InstagramApp.swift in Sources */,
 				2F6137272BC9F48D008CD79F /* CurrentUserProfileView.swift in Sources */,
 				2F61371B2BC57C57008CD79F /* AddEmailView.swift in Sources */,
 				2F61372B2BCC7A3E008CD79F /* PostGridView.swift in Sources */,
 				2F61371F2BC5FD25008CD79F /* CreateUsernameView.swift in Sources */,
+				2F6137442BCD44A3008CD79F /* ContentViewModel.swift in Sources */,
 				2F6137312BCC8E1B008CD79F /* UploadPostViewModel.swift in Sources */,
 				2F61372D2BCC7C0B008CD79F /* ProfileHeaderView.swift in Sources */,
 				2F6137232BC9B915008CD79F /* CompleteSignUpView.swift in Sources */,
