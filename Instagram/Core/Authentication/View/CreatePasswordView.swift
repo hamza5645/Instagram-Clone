@@ -26,6 +26,7 @@ struct CreatePasswordView: View {
             
             SecureField("Password", text: $viewModel.password)
                 .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
                 .modifier(IGTextFieldModifier())
                 .padding(.top)
             
