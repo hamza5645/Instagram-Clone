@@ -16,7 +16,7 @@ class AuthService {
     static let shared = AuthService()
     
     init() {
-        self.userSession = Auth.auth().currentUser
+        Task { try await loadUserData() }
     }
     
     @MainActor
@@ -35,7 +35,7 @@ class AuthService {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
             print("DEBUG: Did create user..")
-            await self.uploadUserData(uid: result.user.uid, username: username, email: email)
+            await uploadUserData(uid: result.user.uid, username: username, email: email)
             print("DEBUG: Did upload user data..")
         } catch {
             print("DEBUG: Failed to register user with error \(error.localizedDescription)")
@@ -43,7 +43,10 @@ class AuthService {
     }
     
     func loadUserData() async throws {
-        
+        self.userSession = Auth.auth().currentUser
+        guard let currentUid = userSession?.uid else { return }
+        let snapshot = try await Firestore.firestore().collection("users").document(currentUid).getDocument()
+        print("DEBUG: Snapshot data is \(snapshot.data())")
     }
     
     func signout() {
