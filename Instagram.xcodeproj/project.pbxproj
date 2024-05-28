@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F4BEB632C067228005C5FE5 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BEB622C067228005C5FE5 /* UserService.swift */; };
+		2F4BEB682C06735A005C5FE5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4BEB672C06735A005C5FE5 /* SearchViewModel.swift */; };
 		2F6136F22BC42333008CD79F /* InstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6136F12BC42333008CD79F /* InstagramApp.swift */; };
 		2F6136F42BC42333008CD79F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6136F32BC42333008CD79F /* ContentView.swift */; };
 		2F6136F62BC42335008CD79F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F6136F52BC42335008CD79F /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F4BEB622C067228005C5FE5 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		2F4BEB672C06735A005C5FE5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2F6136EE2BC42333008CD79F /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F6136F12BC42333008CD79F /* InstagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramApp.swift; sourceTree = "<group>"; };
 		2F6136F32BC42333008CD79F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4BEB652C06732D005C5FE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F6137162BC49A9C008CD79F /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F4BEB662C067335005C5FE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F4BEB672C06735A005C5FE5 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2F6136E52BC42333008CD79F = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +150,7 @@
 		2F6136FF2BC4237D008CD79F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2F4BEB622C067228005C5FE5 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -214,7 +235,8 @@
 		2F6137082BC42441008CD79F /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				2F6137162BC49A9C008CD79F /* SearchView.swift */,
+				2F4BEB652C06732D005C5FE5 /* View */,
+				2F4BEB662C067335005C5FE5 /* ViewModel */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -377,6 +399,7 @@
 				2F6136F42BC42333008CD79F /* ContentView.swift in Sources */,
 				2F6137192BC57542008CD79F /* LoginView.swift in Sources */,
 				2F6137402BCD42A4008CD79F /* AuthService.swift in Sources */,
+				2F4BEB632C067228005C5FE5 /* UserService.swift in Sources */,
 				2F6137292BCC2E4C008CD79F /* Post.swift in Sources */,
 				2F6136F22BC42333008CD79F /* InstagramApp.swift in Sources */,
 				2F6137272BC9F48D008CD79F /* CurrentUserProfileView.swift in Sources */,
@@ -394,6 +417,7 @@
 				2F61371D2BC5FC0E008CD79F /* IGTextFieldModifier.swift in Sources */,
 				2F6137112BC43A94008CD79F /* UserStatView.swift in Sources */,
 				2F6137132BC442DD008CD79F /* FeedView.swift in Sources */,
+				2F4BEB682C06735A005C5FE5 /* SearchViewModel.swift in Sources */,
 				2F61370C2BC42565008CD79F /* MainTabView.swift in Sources */,
 				2F6137212BC5FFB1008CD79F /* CreatePasswordView.swift in Sources */,
 			);
