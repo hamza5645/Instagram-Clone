@@ -13,7 +13,7 @@ struct ProfileHeaderView: View {
         VStack(spacing: 10) {
             // pic and stats
             HStack {
-                Image(user.profileImageUrl ?? "")
+                Image(user.profileImageUrl ?? "Instagram-icon")
                     .resizable()
                     .scaledToFill()
                     .frame(width: 80, height: 80)
@@ -43,6 +43,8 @@ struct ProfileHeaderView: View {
                     Text(bio)
                         .font(.footnote)
                 }
+                
+                Text(user.username)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal)

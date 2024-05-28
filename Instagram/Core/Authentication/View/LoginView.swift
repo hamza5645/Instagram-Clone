@@ -17,7 +17,7 @@ struct LoginView: View {
                 Spacer()
                 
                 // logo Image
-                Image("Instagram")
+                Image("Instagram-text")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 220, height: 100)
