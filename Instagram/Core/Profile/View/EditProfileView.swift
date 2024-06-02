@@ -61,12 +61,7 @@ struct EditProfileView: View {
                             .clipShape(Circle())
                             .frame(width: 80, height: 80)
                     } else {
-                        Image("Instagram-icon")
-                            .resizable()
-                            .foregroundStyle(.white)
-                            .background(.gray)
-                            .clipShape(Circle())
-                            .frame(width: 80, height: 80)
+                        CircularProfileImageView(user: viewModel.user, size: .large)
                     }
                     
                     Text("Edit profile picture")
