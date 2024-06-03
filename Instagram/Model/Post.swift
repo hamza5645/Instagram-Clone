@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 struct Post: Identifiable, Hashable, Codable {
     let id: String
@@ -13,16 +14,16 @@ struct Post: Identifiable, Hashable, Codable {
     let caption: String
     var likes: Int
     let imageUrl: String
-    let timestamp: Date
+    let timestamp: Timestamp
     var user: User?
 }
 
 extension Post {
     static var MOCK_POSTS: [Post] = [
-        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "Look at this huge monitor", likes: 10, imageUrl: "computer-1", timestamp: Date(), user: User.MOCK_USERS[0]),
-        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "#Beach", likes: 20, imageUrl: "salman-1", timestamp: Date(), user: User.MOCK_USERS[1]),
-        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "Yumm", likes: 30, imageUrl: "fried-chicken", timestamp: Date(), user: User.MOCK_USERS[2]),
-        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "Found a nice car", likes: 40, imageUrl: "amg-1", timestamp: Date(), user: User.MOCK_USERS[3]),
-        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "Strawberrys", likes: 50, imageUrl: "strawberry", timestamp: Date(), user: User.MOCK_USERS[4])
+        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "Look at this huge monitor", likes: 10, imageUrl: "computer-1", timestamp: Timestamp(), user: User.MOCK_USERS[0]),
+        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "#Beach", likes: 20, imageUrl: "salman-1", timestamp: Timestamp(), user: User.MOCK_USERS[1]),
+        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "Yumm", likes: 30, imageUrl: "fried-chicken", timestamp: Timestamp(), user: User.MOCK_USERS[2]),
+        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "Found a nice car", likes: 40, imageUrl: "amg-1", timestamp: Timestamp(), user: User.MOCK_USERS[3]),
+        .init(id: NSUUID().uuidString, ownerUid: NSUUID().uuidString, caption: "Strawberrys", likes: 50, imageUrl: "strawberry", timestamp: Timestamp(), user: User.MOCK_USERS[4])
     ]
 }
