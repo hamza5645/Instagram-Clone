@@ -46,6 +46,7 @@
 		2F6137442BCD44A3008CD79F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137432BCD44A3008CD79F /* ContentViewModel.swift */; };
 		2F6137472BCD4B47008CD79F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137462BCD4B47008CD79F /* RegistrationViewModel.swift */; };
 		2F6137492BCD66F6008CD79F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137482BCD66F6008CD79F /* LoginViewModel.swift */; };
+		2FEA793B2C0F005D0063B6A3 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA793A2C0F005D0063B6A3 /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		2F6137432BCD44A3008CD79F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		2F6137462BCD4B47008CD79F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		2F6137482BCD66F6008CD79F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2FEA793A2C0F005D0063B6A3 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,8 +264,8 @@
 		2F6137062BC4243A008CD79F /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				2F6137122BC442DD008CD79F /* FeedView.swift */,
-				2F6137142BC442ED008CD79F /* FeedCell.swift */,
+				2FEA79392C0F002F0063B6A3 /* View */,
+				2FEA79382C0F00240063B6A3 /* ViewModel */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -357,6 +359,23 @@
 				2F6137482BCD66F6008CD79F /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FEA79382C0F00240063B6A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2FEA793A2C0F005D0063B6A3 /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FEA79392C0F002F0063B6A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F6137122BC442DD008CD79F /* FeedView.swift */,
+				2F6137142BC442ED008CD79F /* FeedCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +474,7 @@
 				2F61371B2BC57C57008CD79F /* AddEmailView.swift in Sources */,
 				2F61372B2BCC7A3E008CD79F /* PostGridView.swift in Sources */,
 				2F61371F2BC5FD25008CD79F /* CreateUsernameView.swift in Sources */,
+				2FEA793B2C0F005D0063B6A3 /* FeedViewModel.swift in Sources */,
 				2F6137442BCD44A3008CD79F /* ContentViewModel.swift in Sources */,
 				2F4BEB6A2C073416005C5FE5 /* EditProfileView.swift in Sources */,
 				2F6137492BCD66F6008CD79F /* LoginViewModel.swift in Sources */,
