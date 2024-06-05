@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FeedView: View {
     @StateObject var viewModel = FeedViewModel()
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -23,7 +24,7 @@ struct FeedView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Image("Instagram-text")
+                    Image(colorScheme == .dark ? "Instagram-text-white" : "Instagram-text-black")
                         .resizable()
                         .frame(width: 100, height: 24)
                         .foregroundStyle(.black)

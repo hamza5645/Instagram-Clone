@@ -33,7 +33,7 @@ struct SearchView: View {
                                 
                                 Spacer()
                             }
-                            .foregroundStyle(.black)
+                            .foregroundStyle(.primary)
                             .padding(.horizontal)
                         }
                     }

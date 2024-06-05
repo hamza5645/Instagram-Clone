@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationStack {
@@ -17,7 +18,7 @@ struct LoginView: View {
                 Spacer()
                 
                 // logo Image
-                Image("Instagram-text")
+                Image(colorScheme == .dark ? "Instagram-text-white" : "Instagram-text-black")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 220, height: 100)

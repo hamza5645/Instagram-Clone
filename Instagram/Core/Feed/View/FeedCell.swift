@@ -42,6 +42,7 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "heart")
                         .imageScale(.large)
+                        .foregroundStyle(.primary)
                 }
                 
                 Button {
@@ -49,6 +50,7 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "bubble.right")
                         .imageScale(.large)
+                        .foregroundStyle(.primary)
                 }
                 
                 Button {
@@ -56,12 +58,12 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "paperplane")
                         .imageScale(.large)
+                        .foregroundStyle(.primary)
                 }
                 
                 Spacer()
             }
             .padding([.leading, .top], 8)
-            .foregroundStyle(.black)
             
             // likes label
             
