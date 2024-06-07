@@ -37,16 +37,6 @@ struct LoginView: View {
                         .modifier(IGTextFieldModifier())
                 }
                 
-                // forgot password
-                Button {
-                    print("show forgot password")
-                } label: {
-                    Text("Forgot Password?")
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-                        .padding(.top)
-                }
-                
                 // login
                 Button {
                     Task { try await viewModel.signIn() }
