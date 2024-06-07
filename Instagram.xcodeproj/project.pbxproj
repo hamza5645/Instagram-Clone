@@ -46,6 +46,7 @@
 		2F6137442BCD44A3008CD79F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137432BCD44A3008CD79F /* ContentViewModel.swift */; };
 		2F6137472BCD4B47008CD79F /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137462BCD4B47008CD79F /* RegistrationViewModel.swift */; };
 		2F6137492BCD66F6008CD79F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6137482BCD66F6008CD79F /* LoginViewModel.swift */; };
+		2FA3878B2C1349880054095D /* RefreshControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3878A2C1349880054095D /* RefreshControlView.swift */; };
 		2FEA793B2C0F005D0063B6A3 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA793A2C0F005D0063B6A3 /* FeedViewModel.swift */; };
 		2FEA793D2C1054A60063B6A3 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA793C2C1054A60063B6A3 /* PostService.swift */; };
 		2FEA79412C105CC80063B6A3 /* PostGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEA79402C105CC80063B6A3 /* PostGridViewModel.swift */; };
@@ -87,6 +88,7 @@
 		2F6137432BCD44A3008CD79F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		2F6137462BCD4B47008CD79F /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		2F6137482BCD66F6008CD79F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2FA3878A2C1349880054095D /* RefreshControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControlView.swift; sourceTree = "<group>"; };
 		2FEA793A2C0F005D0063B6A3 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		2FEA793C2C1054A60063B6A3 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		2FEA79402C105CC80063B6A3 /* PostGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridViewModel.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			children = (
 				2F6137122BC442DD008CD79F /* FeedView.swift */,
 				2F6137142BC442ED008CD79F /* FeedCell.swift */,
+				2FA3878A2C1349880054095D /* RefreshControlView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				2F4BEB682C06735A005C5FE5 /* SearchViewModel.swift in Sources */,
 				2F61370C2BC42565008CD79F /* MainTabView.swift in Sources */,
 				2F6137212BC5FFB1008CD79F /* CreatePasswordView.swift in Sources */,
+				2FA3878B2C1349880054095D /* RefreshControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

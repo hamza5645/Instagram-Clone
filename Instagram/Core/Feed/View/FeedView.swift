@@ -13,6 +13,9 @@ struct FeedView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
+                RefreshControlView(coordinateSpaceName: "pullToRefresh") {
+                    Task { try await viewModel.fetchPosts() }
+                }
                 LazyVStack(spacing: 24) {
                     ForEach(viewModel.posts) { post in
                         FeedCell(post: post)
@@ -20,6 +23,7 @@ struct FeedView: View {
                 }
                 .padding(.top, 8)
             }
+            .coordinateSpace(name: "pullToRefresh")
             .navigationTitle("Feed")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
