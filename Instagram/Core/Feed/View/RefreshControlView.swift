@@ -27,14 +27,14 @@ struct RefreshControlView: View {
                         }
                     }
             }
-            HStack {
-                Spacer()
-                if refresh {
+            if refresh {
+                HStack {
+                    Spacer()
                     ProgressView()
-                } else {
-                    Text("Pull to refresh")
+                    Spacer()
                 }
-                Spacer()
+            } else {
+                EmptyView()
             }
         }
         .padding(.top, -50)
