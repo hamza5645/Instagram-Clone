@@ -52,33 +52,6 @@ struct LoginView: View {
                 }
                 .padding(.vertical)
                 
-                // divider
-//                HStack {
-//                    Rectangle()
-//                        .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
-//                    
-//                    Text("OR")
-//                        .font(.footnote)
-//                        .fontWeight(.semibold)
-//                    
-//                    Rectangle()
-//                        .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
-//                }
-//                .foregroundStyle(.gray)
-//                
-//                // continue with facebook
-//                HStack {
-//                    Image("facebook")
-//                        .resizable()
-//                        .frame(width: 20, height: 20)
-//                    
-//                    Text("Continue with Facebook")
-//                        .font(.footnote)
-//                        .fontWeight(.semibold)
-//                        .foregroundStyle(Color(.systemBlue))
-//                }
-//                .padding(.top, 8)
-                
                 Spacer()
                 
                 Divider()
