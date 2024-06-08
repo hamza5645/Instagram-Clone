@@ -12,6 +12,8 @@ struct CreatePasswordView: View {
     @EnvironmentObject var viewModel: RegistrationViewModel
     @StateObject var authService = AuthService.shared
     
+    @State private var navigateToNextView = false
+    
     var body: some View {
         VStack(spacing: 12) {
             Text("Create a password")
@@ -19,7 +21,7 @@ struct CreatePasswordView: View {
                 .fontWeight(.bold)
                 .padding(.top)
             
-            Text("Your password must be at least 6 characters in lenght")
+            Text("Your password must be at least 6 characters in length")
                 .font(.footnote)
                 .foregroundStyle(.gray)
                 .multilineTextAlignment(.center)
@@ -30,29 +32,39 @@ struct CreatePasswordView: View {
                 .autocorrectionDisabled()
                 .modifier(IGTextFieldModifier())
                 .padding(.top)
+                .onChange(of: viewModel.password) { _ in
+                    viewModel.validatePassword()
+                }
             
             // Display error message
-            if let errorMessage = authService.errorMessage {
+            if let errorMessage = viewModel.passwordError {
                 Text(errorMessage)
                     .foregroundColor(.red)
                     .padding()
             }
             
-            // login
-            NavigationLink {
-                    CompleteSignUpView()
-                        .navigationBarBackButtonHidden(true)
-            } label: {
+            Button(action: {
+                viewModel.validatePassword()
+                if viewModel.passwordError == nil {
+                    navigateToNextView = true
+                }
+            }) {
                 Text("Next")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                     .frame(width: 360, height: 44)
                     .cornerRadius(10)
-                    .background(Color(.systemBlue))
+                    .background(viewModel.passwordError == nil ? Color(.systemBlue) : Color.gray)
                     .cornerRadius(10)
             }
             .padding(.vertical)
+            .disabled(viewModel.passwordError != nil)
+            
+            // NavigationLink with condition
+            NavigationLink(destination: CompleteSignUpView().navigationBarBackButtonHidden(true), isActive: $navigateToNextView) {
+                EmptyView()
+            }
             
             Spacer()
         }
@@ -70,4 +82,5 @@ struct CreatePasswordView: View {
 
 #Preview {
     CreatePasswordView()
+        .environmentObject(RegistrationViewModel())
 }
