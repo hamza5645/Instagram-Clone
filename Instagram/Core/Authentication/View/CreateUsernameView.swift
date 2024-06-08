@@ -10,6 +10,7 @@ import SwiftUI
 struct CreateUsernameView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: RegistrationViewModel
+    @StateObject var authService = AuthService.shared
     
     var body: some View {
         VStack(spacing: 12) {
@@ -28,6 +29,13 @@ struct CreateUsernameView: View {
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
                 .modifier(IGTextFieldModifier())
+            
+            // Display error message
+            if let errorMessage = authService.errorMessage {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .padding()
+            }
             
             // login
             NavigationLink {

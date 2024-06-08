@@ -43,8 +43,9 @@ class AuthService: ObservableObject {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
             await uploadUserData(uid: result.user.uid, username: username, email: email)
+            errorMessage = nil
         } catch {
-            print("DEBUG: Failed to register user with error \(error.localizedDescription)")
+            handleError(error)
         }
     }
     
@@ -78,8 +79,12 @@ class AuthService: ObservableObject {
                 errorMessage = "Invalid email format. Please check your email."
             case .userNotFound:
                 errorMessage = "No account found with this email. Please sign up."
+            case .emailAlreadyInUse:
+                errorMessage = "This email is already in use. Please use a different email."
+            case .weakPassword:
+                errorMessage = "Your password is too weak. Please choose a stronger password."
             default:
-                errorMessage = "Login failed: \(error.localizedDescription)"
+                errorMessage = "Signup failed: \(error.localizedDescription)"
             }
         } else {
             errorMessage = "An unknown error occurred. Please try again."

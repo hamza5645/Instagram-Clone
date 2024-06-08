@@ -10,6 +10,7 @@ import SwiftUI
 struct CompleteSignUpView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: RegistrationViewModel
+    @StateObject var authService = AuthService.shared
     
     var body: some View {
         VStack(spacing: 12) {

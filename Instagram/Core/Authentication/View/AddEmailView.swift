@@ -10,6 +10,9 @@ import SwiftUI
 struct AddEmailView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: RegistrationViewModel
+    @StateObject var authService = AuthService.shared
+    
+    @State private var navigateToNextView = false
     
     var body: some View {
         VStack(spacing: 12) {
@@ -28,22 +31,39 @@ struct AddEmailView: View {
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
                 .modifier(IGTextFieldModifier())
+                .onChange(of: viewModel.email) { _ in
+                    viewModel.validateEmail()
+                }
             
-            // login
-            NavigationLink {
-                CreateUsernameView()
-                    .navigationBarBackButtonHidden(true)
-            } label: {
+            Button(action: {
+                viewModel.validateEmail()
+                if viewModel.emailError == nil {
+                    navigateToNextView = true
+                }
+            }) {
                 Text("Next")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                     .frame(width: 360, height: 44)
                     .cornerRadius(10)
-                    .background(Color(.systemBlue))
+                    .background(viewModel.emailError == nil ? Color(.systemBlue) : Color.gray)
                     .cornerRadius(10)
             }
             .padding(.vertical)
+            .disabled(viewModel.emailError != nil)
+            
+            // Display error message
+            if let errorMessage = viewModel.emailError {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .padding()
+            }
+            
+            // NavigationLink with condition
+            NavigationLink(destination: CreateUsernameView().navigationBarBackButtonHidden(true), isActive: $navigateToNextView) {
+                EmptyView()
+            }
             
             Spacer()
         }
@@ -61,4 +81,5 @@ struct AddEmailView: View {
 
 #Preview {
     AddEmailView()
+        .environmentObject(RegistrationViewModel())
 }

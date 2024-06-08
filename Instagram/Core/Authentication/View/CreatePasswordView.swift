@@ -10,6 +10,7 @@ import SwiftUI
 struct CreatePasswordView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: RegistrationViewModel
+    @StateObject var authService = AuthService.shared
     
     var body: some View {
         VStack(spacing: 12) {
@@ -29,6 +30,13 @@ struct CreatePasswordView: View {
                 .autocorrectionDisabled()
                 .modifier(IGTextFieldModifier())
                 .padding(.top)
+            
+            // Display error message
+            if let errorMessage = authService.errorMessage {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .padding()
+            }
             
             // login
             NavigationLink {
