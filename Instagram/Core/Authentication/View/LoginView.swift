@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
     @Environment(\.colorScheme) var colorScheme
+    @StateObject var authService = AuthService.shared
     
     var body: some View {
         NavigationStack {
@@ -51,6 +52,13 @@ struct LoginView: View {
                         .cornerRadius(10)
                 }
                 .padding(.vertical)
+                
+                // Display error message
+                if let errorMessage = authService.errorMessage {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .padding()
+                }
                 
                 Spacer()
                 

@@ -10,9 +10,11 @@ import FirebaseAuth
 import FirebaseFirestoreSwift
 import Firebase
 
-class AuthService {
+class AuthService: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
+    @Published var errorMessage: String?
+    @Published var isAuthenticated: Bool = false
     
     static let shared = AuthService()
     
@@ -26,8 +28,12 @@ class AuthService {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
             try await loadUserData()
+            if result.user != nil {
+                isAuthenticated = true
+                errorMessage = nil
+            }
         } catch {
-            print("DEBUG: Failed to log in user with error \(error.localizedDescription)")
+            handleError(error)
         }
     }
     
@@ -60,5 +66,23 @@ class AuthService {
         self.currentUser = user
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
         try? await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
+    }
+    
+    private func handleError(_ error: Error) {
+        // Provide detailed error messages based on the error type
+        if let errorCode = AuthErrorCode.Code(rawValue: (error as NSError).code) {
+            switch errorCode {
+            case .wrongPassword:
+                errorMessage = "Incorrect password. Please try again."
+            case .invalidEmail:
+                errorMessage = "Invalid email format. Please check your email."
+            case .userNotFound:
+                errorMessage = "No account found with this email. Please sign up."
+            default:
+                errorMessage = "Login failed: \(error.localizedDescription)"
+            }
+        } else {
+            errorMessage = "An unknown error occurred. Please try again."
+        }
     }
 }
