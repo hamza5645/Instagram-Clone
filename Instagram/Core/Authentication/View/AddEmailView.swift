@@ -64,6 +64,7 @@ struct AddEmailView: View {
             NavigationLink(destination: CreateUsernameView().navigationBarBackButtonHidden(true), isActive: $navigateToNextView) {
                 EmptyView()
             }
+            .hidden()
             
             Spacer()
         }
